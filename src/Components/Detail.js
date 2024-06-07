@@ -125,12 +125,14 @@ const Detail = () => {
               table {
                 border-collapse: collapse;
                 width: 100%;
-                table-layout: fixed; /* Ensures the table is responsive */
+                max-width: 70%;
+                margin: 0 auto;
+                table-layout: auto; /* Adjust based on content */
               }
               th, td {
                 border: 1px solid gray;
                 padding: 12px;
-                text-align: left;
+                text-align: center; /* Center-align text */
               }
               th {
                 background-color: #333;
@@ -147,6 +149,9 @@ const Detail = () => {
               }
 
               @media screen and (max-width: 768px) {
+                table {
+                  width: 100%;
+                }
                 thead {
                   display: none;
                 }
@@ -176,15 +181,6 @@ const Detail = () => {
               }
 
               @media screen and (max-width: 480px) {
-                td::before {
-                  font-size: 0.85em;
-                }
-              }
-                @media screen and (min-width: 768px) and (max-width: 1024px) {
-  /* CSS rules for screens between 768px and 1024px */
-  /* ... */
-}
-              @media screen and (max-width: 1024px:1720px) {
                 td::before {
                   font-size: 0.85em;
                 }
@@ -291,4 +287,4 @@ const Detail = () => {
   );
 };
 
-export default Detail
+export default Detail;  
